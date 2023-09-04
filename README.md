@@ -1,6 +1,7 @@
 # Knight Rider Adventure
 
-<img width="604" alt="image" src="https://github.com/faisal58/arduino-smart-car/assets/4231313/dd4a2c53-f801-4c65-bee9-86592152bf21">
+![image](https://github.com/faisal58/arduino-smart-car/assets/4231313/3aae1a4c-d370-42c6-a27b-1d94ada8d477)
+
 
 
 ## Table of Contents
@@ -13,6 +14,9 @@
 
 ## Introduction
 Welcome to the Knight Rider Smart Car project! We have tried to develop an intelligent car equipped with ultrasonic sensors, motors, and a narrative code structure. 
+
+![image](https://github.com/faisal58/arduino-smart-car/assets/4231313/5691368c-27f5-4a59-93e2-c6b69f8abbda)
+
 
 ## Features
 - Intelligent car with ultrasonic sensors for obstacle detection
