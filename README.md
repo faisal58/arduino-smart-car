@@ -1,5 +1,7 @@
 # Knight Rider Adventure
 
+<img width="604" alt="image" src="https://github.com/faisal58/arduino-smart-car/assets/4231313/dd4a2c53-f801-4c65-bee9-86592152bf21">
+
 
 ## Table of Contents
 - [Introduction](#introduction)
