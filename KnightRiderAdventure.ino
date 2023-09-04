@@ -338,6 +338,7 @@ void csf() {
 
 void rescueMission() {
     if (millis() - nonce > 5000) {
+        // Current moment what distance the eyes are sense
         int currentEyes[3] = {
                 eyes.measureFrontDistance(),
                 eyes.measureLeftDistance(),
@@ -349,14 +350,21 @@ void rescueMission() {
         csf();
         lcd.print("TH=");
         lcd.setCursor(3, 0);
+        // In last 5 seconds how much difference the eyes are observed on it's front path
         int df = (int) abs(beforeEyes[0] - currentEyes[0]);
         lcd.print(df);
 
+        // When the front path difference are less than or equal to the threshold value
         if( df <= frontTh ) {
+            // When the eyes are sense more than 100 cm path clear in the front ahead
+            // but the path difference is less than the long threshold value
+            // it just wait for next 5 seconds before making any decision.
             if (currentEyes[0] > 100 && df <= longVisionTh) {
                 longVision++;
             }
-            // Most probably car is stuck
+            // When the long vision happen more than 2 times (i.e: 15 seconds with the similar difference between distance)
+            // Or, the front path is less than 100 cm clear 
+            // We can say, it is highly possible that the car is stuck
             if (longVision > 2 || currentEyes[0] < 100) {
                 delay(50);
                 car.changeGear(1);
